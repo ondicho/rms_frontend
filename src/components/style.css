@@ -1,36 +1,49 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.btn{
-    margin : 10px;
-    padding : 10px;
+.btn {
+    margin: 10px;
+    padding: 10px;
     min-width: 100px;
 }
 
-.btn:hover{
-    background-color:#3B8754 ;
-    color:black;
+.btn:hover {
+    background-color: #3B8754;
+    color: black;
 }
 
-.paymentCards{
-    margin : 10px;
-    padding : 10px;
+.paymentCards {
+    margin: 10px;
+    padding: 10px;
 }
 
-.row{
+.row {
     overflow: auto;
 }
 
-.paymentCards{
+.paymentCards {
     min-height: 11rem;
 }
 
-.nav-link:active{
-    color:white;
+.nav-link:active {
+    color: white;
 }
 
-.nav-link:hover{
-    color:white;
+.nav-link:hover {
+    color: white;
+}
+
+@media only screen and (min-width: 600px) {
+    .parentNav {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navigation {
+        display: flex;
+    }
 }

@@ -45,7 +45,7 @@ function Dashboard() {
     //   </Alert>
   };
   return (
-    <div>
+    <>
     <Row>
       <div className="alerts" ref={ref}></div>
       <Col sm={4}>
@@ -98,7 +98,7 @@ function Dashboard() {
         </Card>
       </Col>
     </Row>
-    </div>
+    </>
   );
 }
 

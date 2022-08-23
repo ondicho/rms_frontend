@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -10,7 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+} from "reactstrap";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -18,12 +19,12 @@ export default class MyNavbar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   render() {
@@ -33,31 +34,33 @@ export default class MyNavbar extends React.Component {
           <NavbarBrand href="/">RMS</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Make Payments</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Raise Ticket</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  UserName
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    View Profile
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Logout
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+            <Nav className="ml-auto parentNav" navbar>
+              <div className="navigation">
+                <NavItem>
+                  <NavLink href="/components/">Make Payments</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="https://github.com/reactstrap/reactstrap">
+                    Raise Ticket
+                  </NavLink>
+                </NavItem>
+              </div>
+              <div>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>
+                    UserName
+                  </DropdownToggle>
+                  <DropdownMenu end>
+                    <DropdownItem>View Profile</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Logout</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </div>
             </Nav>
           </Collapse>
         </Navbar>
-        </>
+      </>
     );
   }
 }
