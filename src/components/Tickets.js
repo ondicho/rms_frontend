@@ -15,7 +15,6 @@ import "./style.css";
 var DatePicker = require("reactstrap-date-picker");
 
 function Tickets() {
-
   return (
     <>
       <Card className="tickets mainContainer">
@@ -51,10 +50,17 @@ function Tickets() {
               </FormText>
             </Col>
           </FormGroup>
-          <FormGroup tag="fieldset" row>
-            <Label sm={2}>Fix appointment</Label>
+          <FormGroup row>
+            <Label sm={2} for="date">
+              Appointment Date
+            </Label>
             <Col sm={10}>
-             
+              <Input
+                type="date"
+                name="date"
+                id="date"
+                placeholder="Fundi will visit to fix"
+              />
             </Col>
           </FormGroup>
           <FormGroup row>

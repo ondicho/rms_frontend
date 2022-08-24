@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 
 import { MdAccountCircle } from "react-icons/md";
-import { Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -43,9 +43,11 @@ export default class MyNavbar extends React.Component {
                   <NavLink href="/">Make Payments</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/tickets">
-                    Raise Ticket
-                  </NavLink>
+                  <NavLink href="/tickets">Raise Ticket</NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink href="/login">Login</NavLink>
                 </NavItem>
               </div>
               <div>
@@ -54,6 +56,7 @@ export default class MyNavbar extends React.Component {
                     <MdAccountCircle />
                     &nbsp; username
                   </DropdownToggle>
+
                   <DropdownMenu end>
                     <DropdownItem>View Profile</DropdownItem>
                     <DropdownItem divider />

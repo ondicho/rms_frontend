@@ -35,13 +35,13 @@
     color: white;
 }
 
-.tickets{
+.tickets {
     padding: 20px;
     margin: 50px;
     display: grid;
 }
 
-.tickets .card{
+.tickets .card {
     display: grid;
 }
 
@@ -52,10 +52,24 @@
 }
 
 .mainContainer {
-    min-height: calc(65vh - 56px);
-  }
+    min-height: calc(100vh - 348.8px);
+}
 
+.card {
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.3rem #0000004d;
+}
 
+.login {
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.3rem #0000004d;
+    margin: 15vh;
+    padding: 3rem;
+}
+
+.loginButton {
+    text-align: center;
+}
 
 @media only screen and (min-width: 600px) {
     .parentNav {
@@ -73,9 +87,11 @@
         padding: 20px;
         margin: 50px;
         display: grid;
-        
+
     }
 }
+
+
 
 @media only screen and (max-width: 950px) {
     .tickets {
