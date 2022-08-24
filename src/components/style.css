@@ -35,6 +35,18 @@
     color: white;
 }
 
+.tickets{
+    padding: 20px;
+    margin: 50px;
+}
+
+.tickets {
+    padding: 20px;
+    margin: 50px;
+}
+
+
+
 @media only screen and (min-width: 600px) {
     .parentNav {
         display: flex;
@@ -45,5 +57,27 @@
 
     .navigation {
         display: flex;
+    }
+
+    .tickets {
+        padding: 20px;
+        margin: 50px;
+        
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .tickets {
+        padding: 20px;
+        margin: 50px;
+        width: max-content;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tickets {
+        padding: 20px;
+        margin: 50px;
+        width: auto;
     }
 }

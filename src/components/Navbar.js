@@ -13,6 +13,9 @@ import {
   DropdownItem,
 } from "reactstrap";
 
+import { MdAccountCircle } from "react-icons/md";
+import { Link} from "react-router-dom"
+
 export default class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -37,10 +40,10 @@ export default class MyNavbar extends React.Component {
             <Nav className="ml-auto parentNav" navbar>
               <div className="navigation">
                 <NavItem>
-                  <NavLink href="/components/">Make Payments</NavLink>
+                  <NavLink href="/">Make Payments</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
+                  <NavLink href="/tickets">
                     Raise Ticket
                   </NavLink>
                 </NavItem>
@@ -48,7 +51,8 @@ export default class MyNavbar extends React.Component {
               <div>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
-                    UserName
+                    <MdAccountCircle />
+                    &nbsp; username
                   </DropdownToggle>
                   <DropdownMenu end>
                     <DropdownItem>View Profile</DropdownItem>

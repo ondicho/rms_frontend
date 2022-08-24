@@ -4,7 +4,6 @@ import MyNavbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <MyNavbar />
       <Dashboard />
     </>
   );
