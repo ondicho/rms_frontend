@@ -7,14 +7,17 @@ import Tickets from "./components/Tickets";
 import MyNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <MyNavbar />
-    <BrowserRouter className="test-height">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/payments" element={ <Dashboard />}/>
         <Route path="/tickets" element={<Tickets />} />
         <Route path="/login" element={<Login />} />
       </Routes>

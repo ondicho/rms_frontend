@@ -3,9 +3,10 @@
     margin: 0;
 }
 
-.color-nav{
+.color-nav {
     background-color: var(--purple);
 }
+
 .paymentbtn {
     margin: 10px;
     padding: 10px;
@@ -26,9 +27,6 @@
     overflow: auto;
 }
 
-.paymentCards {
-    min-height: 11rem;
-}
 
 .nav-link:active {
     color: white;
@@ -72,6 +70,21 @@
 
 .loginButton {
     text-align: center;
+}
+
+.mainContainer.row {
+    background-color: #DFDFE7;
+    border: 1px solid #000000;
+}
+
+.paymentCards {
+    min-height: 14rem;
+    margin-left: 5rem;
+}
+
+.bills {
+    width: 100%;
+    height: auto;
 }
 
 @media only screen and (min-width: 600px) {

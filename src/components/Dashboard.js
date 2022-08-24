@@ -45,9 +45,9 @@ function Dashboard() {
   return (
     <>
       <Row className="mainContainer">
-        <div className="alerts" ref={ref}></div>
         <Col sm={4}>
           <Card
+          id="paymenytCard1"
             body
             className="my-2 paymentCards"
             style={{

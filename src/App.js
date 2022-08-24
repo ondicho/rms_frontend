@@ -1,10 +1,12 @@
 import Dashboard from "./components/Dashboard";
 import MyNavbar from "./components/Navbar";
+import Rent from "./images/Rent.jpg"
+import "./components/style.css"
 
 function App() {
   return (
     <>
-      <Dashboard />
+     <img className="bills" src={Rent}/>
     </>
   );
 }

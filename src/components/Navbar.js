@@ -40,6 +40,9 @@ export default class MyNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto parentNav" navbar>
               <div className="navigation">
+              <NavItem>
+                  <NavLink href="/">Bills</NavLink>
+                </NavItem>
                 <NavItem>
                   <NavLink href="/">Make Payments</NavLink>
                 </NavItem>
