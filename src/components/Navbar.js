@@ -15,6 +15,7 @@ import {
 
 import { MdAccountCircle } from "react-icons/md";
 import { Link } from "react-router-dom";
+import "./style.css"
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <>
-        <Navbar color="success" light expand="md">
+        <Navbar className="color-nav" light expand="md">
           <NavbarBrand href="/">RMS</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

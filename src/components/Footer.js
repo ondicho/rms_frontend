@@ -50,7 +50,7 @@ export default Footer;
 
 const FooterContainer = styled.footer`
   .footer-middle {
-    background: var(--mainLight);
+    background: var(--light-purple);
     padding-top: 3rem;
   }
 

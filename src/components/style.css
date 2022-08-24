@@ -3,6 +3,9 @@
     margin: 0;
 }
 
+.color-nav{
+    background-color: var(--purple);
+}
 .paymentbtn {
     margin: 10px;
     padding: 10px;
