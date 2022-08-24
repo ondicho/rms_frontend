@@ -44,7 +44,7 @@ function Dashboard() {
   };
   return (
     <>
-      <Row>
+      <Row className="mainContainer">
         <div className="alerts" ref={ref}></div>
         <Col sm={4}>
           <Card
@@ -56,7 +56,7 @@ function Dashboard() {
           >
             <CardTitle tag="h5">Rent</CardTitle>
             <CardText>Rent Due : Ksh 14500</CardText>
-            <Button color="secondary" onClick={payRent} className="btn">
+            <Button color="secondary" onClick={payRent} className="paymentbtn">
               Pay Rent
             </Button>
           </Card>
@@ -71,7 +71,7 @@ function Dashboard() {
           >
             <CardTitle tag="h5">Water</CardTitle>
             <CardText>Water Bill : Ksh 400</CardText>
-            <Button color="secondary" className="btn">
+            <Button color="secondary" className="paymentbtn">
               Pay Water
             </Button>
           </Card>
@@ -90,7 +90,7 @@ function Dashboard() {
                 <Input placeholder="Amount" />
               </InputGroup>
             </CardText>
-            <Button color="secondary" className="btn">
+            <Button color="secondary" className="paymentbtn">
               Buy Tokens
             </Button>
           </Card>

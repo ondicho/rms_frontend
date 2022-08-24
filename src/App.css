@@ -1,3 +1,10 @@
+:root{
+  --mainDark: #00B74A;
+  --mainLight: #BFEDD2;
+  --mainWhite: #FFFFFF
+}
+
+
 .App {
   text-align: center;
 }

@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.btn {
+.paymentbtn {
     margin: 10px;
     padding: 10px;
     min-width: 100px;
@@ -38,12 +38,22 @@
 .tickets{
     padding: 20px;
     margin: 50px;
+    display: grid;
 }
 
-.tickets {
-    padding: 20px;
-    margin: 50px;
+.tickets .card{
+    display: grid;
 }
+
+.submit {
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.mainContainer {
+    min-height: calc(65vh - 56px);
+  }
 
 
 
@@ -62,6 +72,7 @@
     .tickets {
         padding: 20px;
         margin: 50px;
+        display: grid;
         
     }
 }
@@ -71,6 +82,7 @@
         padding: 20px;
         margin: 50px;
         width: max-content;
+        display: grid;
     }
 }
 
@@ -79,5 +91,6 @@
         padding: 20px;
         margin: 50px;
         width: auto;
+        display: grid;
     }
 }

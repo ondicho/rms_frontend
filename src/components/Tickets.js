@@ -1,110 +1,60 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import {
   Button,
+  Card,
   Col,
   Form,
   FormGroup,
   FormText,
   Input,
   Label,
-  Card,
-  Row,
+  option,
 } from "reactstrap";
 import "./style.css";
 
+var DatePicker = require("reactstrap-date-picker");
+
 function Tickets() {
+
   return (
     <>
-      <Card className="tickets">
+      <Card className="tickets mainContainer">
         <Form>
           <FormGroup row>
-            <Label for="exampleEmail" sm={2}>
-              Email
+            <Label for="category" sm={2}>
+              Category
             </Label>
             <Col sm={10}>
-              <Input
-                type="email"
-                name="email"
-                id="exampleEmail"
-                placeholder="with a placeholder"
-              />
+              <Input type="select" name="select" id="category">
+                <option>---</option>
+                <option>Electrical</option>
+                <option>Plumbing</option>
+              </Input>
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="examplePassword" sm={2}>
-              Password
+            <Label for="description" sm={2}>
+              Description
             </Label>
             <Col sm={10}>
-              <Input
-                type="password"
-                name="password"
-                id="examplePassword"
-                placeholder="password placeholder"
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="exampleSelect" sm={2}>
-              Select
-            </Label>
-            <Col sm={10}>
-              <Input type="select" name="select" id="exampleSelect" />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="exampleSelectMulti" sm={2}>
-              Select Multiple
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="select"
-                name="selectMulti"
-                id="exampleSelectMulti"
-                multiple
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="exampleText" sm={2}>
-              Text Area
-            </Label>
-            <Col sm={10}>
-              <Input type="textarea" name="text" id="exampleText" />
+              <Input type="textarea" name="text" id="description" />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label for="exampleFile" sm={2}>
-              File
+              Attach Photo
             </Label>
             <Col sm={10}>
               <Input type="file" name="file" id="exampleFile" />
               <FormText color="muted">
-                This is some placeholder block-level help text for the above
-                input. It's a bit lighter and easily wraps to a new line.
+                Attach a photo and send to landlord
               </FormText>
             </Col>
           </FormGroup>
           <FormGroup tag="fieldset" row>
-            <legend className="col-form-label col-sm-2">Radio Buttons</legend>
+            <Label sm={2}>Fix appointment</Label>
             <Col sm={10}>
-              <FormGroup check>
-                <Label check>
-                  <Input type="radio" name="radio2" /> Option one is this and
-                  that—be sure to include why it's great
-                </Label>
-              </FormGroup>
-              <FormGroup check>
-                <Label check>
-                  <Input type="radio" name="radio2" /> Option two can be
-                  something else and selecting it will deselect option one
-                </Label>
-              </FormGroup>
-              <FormGroup check disabled>
-                <Label check>
-                  <Input type="radio" name="radio2" disabled /> Option three is
-                  disabled
-                </Label>
-              </FormGroup>
+             
             </Col>
           </FormGroup>
           <FormGroup row>
@@ -121,7 +71,7 @@ function Tickets() {
           </FormGroup>
           <FormGroup check row>
             <Col sm={{ size: 10, offset: 2 }}>
-              <Button>Submit</Button>
+              <Button className="submit">Submit</Button>
             </Col>
           </FormGroup>
         </Form>
