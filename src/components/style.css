@@ -14,8 +14,8 @@
 }
 
 .btn:hover {
-    background-color: #3B8754;
-    color: black;
+    background-color: var(--thistle);
+    color: white;
 }
 
 .paymentCards {
@@ -75,16 +75,24 @@
 .mainContainer.row {
     background-color: #DFDFE7;
     border: 1px solid #000000;
+    width: 100%;
+    height: auto;
 }
 
 .paymentCards {
     min-height: 14rem;
     margin-left: 5rem;
+   
 }
 
 .bills {
     width: 100%;
     height: auto;
+}
+
+.col-sm-4 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -124,5 +132,9 @@
         margin: 50px;
         width: auto;
         display: grid;
+    }
+
+    .last{
+        margin-bottom: 5rem;
     }
 }

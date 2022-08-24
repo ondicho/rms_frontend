@@ -79,7 +79,7 @@ function Dashboard() {
         <Col sm={4}>
           <Card
             body
-            className="my-2 paymentCards"
+            className="my-2 paymentCards last"
             style={{
               width: "18rem",
             }}

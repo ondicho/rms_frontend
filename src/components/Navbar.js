@@ -44,7 +44,7 @@ export default class MyNavbar extends React.Component {
                   <NavLink href="/">Bills</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/">Make Payments</NavLink>
+                  <NavLink href="/payments">Make Payments</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/tickets">Raise Ticket</NavLink>
