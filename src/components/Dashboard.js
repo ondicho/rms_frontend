@@ -1,19 +1,13 @@
-import React, {
-  useState,
-  useRef,
-} from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useState } from "react";
 import {
-  Row,
-  Col,
-  Card,
+  Button, Card,
   CardText,
-  CardTitle,
-  Button,
-  Input,
-  InputGroup
+  CardTitle, Col, Input,
+  InputGroup, Row
 } from "reactstrap";
 import { stkpush } from "../Api's/Calls";
+import Footer from "./Footer";
+import MyNavbar from "./Navbar";
 import "./style.css";
 
 function Dashboard() {
@@ -44,10 +38,11 @@ function Dashboard() {
   };
   return (
     <>
+      <MyNavbar />
       <Row className="mainContainer">
         <Col sm={4}>
           <Card
-          id="paymenytCard1"
+            id="paymenytCard1"
             body
             className="my-2 paymentCards"
             style={{
@@ -96,6 +91,7 @@ function Dashboard() {
           </Card>
         </Col>
       </Row>
+      <Footer />
     </>
   );
 }

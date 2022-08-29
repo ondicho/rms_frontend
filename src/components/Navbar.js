@@ -1,21 +1,12 @@
 import React from "react";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
+  Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  UncontrolledDropdown
 } from "reactstrap";
 
 import { MdAccountCircle } from "react-icons/md";
-import { Link } from "react-router-dom";
-import "./style.css"
+import "./style.css";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {

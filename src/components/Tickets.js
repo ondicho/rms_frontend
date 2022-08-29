@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import {
   Button,
   Card,
@@ -7,9 +7,10 @@ import {
   FormGroup,
   FormText,
   Input,
-  Label,
-  option,
+  Label
 } from "reactstrap";
+import Footer from "./Footer";
+import MyNavbar from "./Navbar";
 import "./style.css";
 
 var DatePicker = require("reactstrap-date-picker");
@@ -17,6 +18,7 @@ var DatePicker = require("reactstrap-date-picker");
 function Tickets() {
   return (
     <>
+      <MyNavbar />
       <Card className="tickets mainContainer">
         <Form>
           <FormGroup row>
@@ -82,6 +84,7 @@ function Tickets() {
           </FormGroup>
         </Form>
       </Card>
+      <Footer />
     </>
   );
 }

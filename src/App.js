@@ -1,12 +1,29 @@
+import Cookies from "js-cookie";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Bills from "./components/Bills";
 import Dashboard from "./components/Dashboard";
-import MyNavbar from "./components/Navbar";
-import Rent from "./images/Rent.jpg"
-import "./components/style.css"
+import Login from "./components/Login";
+import Register from "./components/Register";
+import "./components/style.css";
+import Tickets from "./components/Tickets";
+
+Cookies.set("isLoggedIn", "true");
+const isLoggedIn = Cookies.get("isLoggedIn");
 
 function App() {
+  console.log(isLoggedIn);
+
   return (
     <>
-     <img className="bills" src={Rent}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Bills />} />
+          <Route path="/payments" element={<Dashboard />} />
+          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
