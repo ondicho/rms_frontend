@@ -6,7 +6,7 @@ import "./style.css";
 function Login() {
   return (
     <>
-     <div className="main-container">
+     <div className="main-container reverse">
       <div className="mini-container larger">
         <h1 className="login-title">RMS Login</h1>
         <p className="login-text">
@@ -34,7 +34,7 @@ function Login() {
           </div>
         </form>
         <p className="login-text">
-        <Link to="/register">Click here to register</Link>
+        <Link to="/register" className="redirect">Click here to register</Link>
         </p>
       </div>
       <div className="mini-container smaller"></div>

@@ -48,7 +48,7 @@ function Register() {
               </div>
             </form>
             <p className="login-text">
-              <Link to="/login">Already have an account. Login</Link>
+              <Link to="/login" className="redirect">Already have an account. Login</Link>
             </p>
           </div>
         </div>
