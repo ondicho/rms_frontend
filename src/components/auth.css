@@ -105,6 +105,9 @@
 }
 
 @media only screen and (max-width: 400px) {
+    .mini-container.smaller{
+        max-height: 50vh;
+    }
 
     .main-container.reverse{
         flex-direction: column-reverse;
