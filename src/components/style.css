@@ -4,7 +4,7 @@
 }
 
 .color-nav {
-    background-color: var(--purple);
+    background-color: var(--fiery-rose);
 }
 
 .paymentbtn {
@@ -13,13 +13,15 @@
     min-width: 100px;
 }
 
-.btn:hover {
-    background-color: var(--thistle);
+
+/* .btn:hover {
+    background-color: var(--coral);
     color: white;
-}
+} */
 
 .paymentCards {
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
 }
 
@@ -36,10 +38,23 @@
     color: white;
 }
 
+.mainContainer.row {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+}
+
+.mainContainer.padding {
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .tickets {
     padding: 20px;
-    margin: 50px;
+    margin: 10px 0;
     display: grid;
+    width: 80%;
 }
 
 .tickets .card {
@@ -50,10 +65,18 @@
     margin: auto;
     display: flex;
     text-align: center;
+    float: right;
+}
+
+.submit:hover{
+    background-color: var(--fiery-rose);
+    color: #ffffff;
 }
 
 .mainContainer {
+    display: flex;
     min-height: calc(100vh - 348.8px);
+    color: #4c5f6b;
 }
 
 .card {
@@ -72,17 +95,12 @@
     text-align: center;
 }
 
-.mainContainer.row {
-    background-color: #DFDFE7;
-    border: 1px solid #000000;
-    width: 100%;
-    height: auto;
-}
+
 
 .paymentCards {
     min-height: 14rem;
     margin-left: 5rem;
-   
+
 }
 
 .bills {
@@ -93,6 +111,12 @@
 .col-sm-4 {
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -109,7 +133,7 @@
 
     .tickets {
         padding: 20px;
-        margin: 50px;
+        /* margin: 50px; */
         display: grid;
 
     }
@@ -134,7 +158,7 @@
         display: grid;
     }
 
-    .last{
+    .last {
         margin-bottom: 5rem;
     }
 }

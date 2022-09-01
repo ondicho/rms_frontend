@@ -39,7 +39,7 @@ function Dashboard() {
   return (
     <>
       <MyNavbar />
-      <Row className="mainContainer">
+      <Row className="mainContainer ">
         <Col sm={4}>
           <Card
             id="paymenytCard1"

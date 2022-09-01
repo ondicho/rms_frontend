@@ -1,4 +1,4 @@
-:root{
+:root {
   --mainDark: #00B74A;
   --mainLight: #BFEDD2;
   --mainWhite: #FFFFFF;
@@ -6,7 +6,21 @@
   --thistle: #b17ced;
   --purple: #A2A2FA;
   --light-purple: #D1D1FC;
-  --grey:#DFDFE7:
+  --grey: #DFDFE7;
+
+  /* new */
+  --crayola: #2b3d41ff;
+  --coral: #4c5f6bff;
+  --sheen: #64b6acff;
+  --lavender-blue: #d1d1fcff;
+  --fiery-rose: #fb6376ff;
+  --black-shadows: #BFB6BB;
+  --champagne: #eed7c5;
+  --seashell: #EEE2DF;
+
+  /* newer */
+  --charcoal: #424B54;
+  -flax: #E1CE7A;
 
 
   /* purple and grey and black on text */
@@ -51,6 +65,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

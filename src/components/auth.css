@@ -99,9 +99,16 @@
     border-radius: 0.3rem;
     padding: 1rem 1.5rem;
     font-weight: 600;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #ffffff;
+    color: var(--fiery-rose);
+    border: 1px solid var(--fiery-rose);
     cursor: pointer;
+    outline: none !important;
+}
+
+.btn:hover{
+    background-color: var(--fiery-rose)!important;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 400px) {
