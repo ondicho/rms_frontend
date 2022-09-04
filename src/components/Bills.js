@@ -7,6 +7,7 @@ import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function Bills() {
   Cookies.set("isLoggedIn", "false");
@@ -34,8 +35,12 @@ function Bills() {
             <p> Pay rent and other bills at the click of a Button.</p>
           </div>
           <div className="services-description">
-            <Button className="services-button">Login</Button>
-            <Button className="services-button">Sign Up</Button>
+            <Link to="login">
+              <Button className="services-button">Login</Button>
+            </Link>
+            <Link to="register">
+              <Button className="services-button">Sign Up</Button>
+            </Link>
           </div>
         </div>
         <div sm={6} className="landing-col image">
