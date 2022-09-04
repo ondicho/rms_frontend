@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
+import { Button } from "reactstrap";
 
 function Bills() {
   Cookies.set("isLoggedIn", "false");
@@ -18,7 +19,6 @@ function Bills() {
 
       <div className="landing">
         <div sm={6} className="landing-col services-main">
-
           <div className="services-container">
             <div className="services">
               <img src={rent} alt="rent" height="150px" />
@@ -31,11 +31,15 @@ function Bills() {
             </div>
           </div>
           <div className="services-description">
-            <p> Pay rent and other bills at the click of a button.</p>
+            <p> Pay rent and other bills at the click of a Button.</p>
+          </div>
+          <div className="services-description">
+            <Button className="services-button">Login</Button>
+            <Button className="services-button">Sign Up</Button>
           </div>
         </div>
         <div sm={6} className="landing-col image">
-          <img className="main-image" src={Rent} />
+          <img className="mainImage" src={Rent} />
         </div>
       </div>
 

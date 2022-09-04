@@ -179,6 +179,19 @@
     font-weight:bold;
 }
 
+.services-button{
+    background-color: var(--fiery-rose) !important;
+    color: #ffffff!important;
+    margin: 5px;
+}
+
+button.services-button.btn.btn-secondary:hover {
+    color: var(--fiery-rose)!important;
+    background-color: white!important;
+    border: none;
+}
+
+
 
 @media only screen and (min-width: 600px) {
     .parentNav {
@@ -230,8 +243,9 @@
         flex: 1;
     }
 
-    img.main-image {
-        height: 200px!important;
+    img.mainImage {
+        height:200px!important;
+        object-fit: cover;
     }
 
 }
