@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
+import { Button } from "reactstrap";
 
 function Register() {
   return (
@@ -9,6 +10,11 @@ function Register() {
         <div className="main-container">
           <div className="mini-container smaller"></div>
           <div className="mini-container larger">
+            <div className="back-home">
+              <Link to="/">
+                <Button className="services-button">Home</Button>
+              </Link>
+            </div>
             <h1 className="login-title">Sign Up</h1>
             <p className="login-text">
               Pay rent and other bills at the click of a button.
@@ -48,7 +54,9 @@ function Register() {
               </div>
             </form>
             <p className="login-text">
-              <Link to="/login" className="redirect">Already have an account. Login</Link>
+              <Link to="/login" className="redirect">
+                Already have an account. Login
+              </Link>
             </p>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
 import "./style.css";
+import { Button } from "reactstrap";
+
 
 function Login() {
   const [loginData, setLoginData] = useState({
@@ -19,6 +21,11 @@ function Login() {
     <>
       <div className="main-container reverse">
         <div className="mini-container larger">
+          <div className="back-home">
+            <Link to="/">
+              <Button className="services-button">Home</Button>
+            </Link>
+          </div>
           <h1 className="login-title">RMS Login</h1>
           <p className="login-text">
             Pay rent and other bills at the click of a button.
