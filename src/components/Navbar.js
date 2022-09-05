@@ -1,12 +1,21 @@
 import React from "react";
 import {
-  Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem,
+  Collapse,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavItem,
   NavLink,
-  UncontrolledDropdown
+  UncontrolledDropdown,
 } from "reactstrap";
 
 import { MdAccountCircle } from "react-icons/md";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export default class MyNavbar extends React.Component {
   constructor(props) {
@@ -31,7 +40,7 @@ export default class MyNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto parentNav" navbar>
               <div className="navigation">
-              <NavItem>
+                <NavItem>
                   <NavLink href="/">Bills</NavLink>
                 </NavItem>
                 <NavItem>
@@ -49,7 +58,9 @@ export default class MyNavbar extends React.Component {
                   </DropdownToggle>
 
                   <DropdownMenu end>
-                    <DropdownItem>View Profile</DropdownItem>
+                    <DropdownItem>
+                      <Link to="profile">View Profile</Link>
+                    </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>Logout</DropdownItem>
                   </DropdownMenu>
