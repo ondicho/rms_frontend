@@ -48,7 +48,7 @@ function Bills() {
           </div>
         </div>
         <div sm={6} className="landing-col image">
-          <img className="mainImage" src={Rent} />
+          <img className="mainImage" src={Rent}  id="mainImage"/>
         </div>
       </div>
 

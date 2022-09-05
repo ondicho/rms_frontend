@@ -189,6 +189,7 @@ button.services-button.btn.btn-secondary a {
     text-decoration: none;
     color: white;
 }
+
 button.services-button.btn.btn-secondary a:hover {
     color: var(--fiery-rose) !important;
 }
@@ -258,4 +259,7 @@ button.services-button.btn.btn-secondary:hover {
         object-fit: cover;
     }
 
+    .landing-col.image {
+        display: none;
+    }
 }
