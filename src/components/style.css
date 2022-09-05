@@ -157,11 +157,11 @@
 }
 
 .services img {
-    padding: 40px;
+    padding: 20px;
 }
 
 .services img:hover {
-    padding: 40px;
+    padding: 20px;
     scale: 1.2;
 
 }

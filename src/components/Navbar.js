@@ -40,10 +40,6 @@ export default class MyNavbar extends React.Component {
                 <NavItem>
                   <NavLink href="/tickets">Raise Ticket</NavLink>
                 </NavItem>
-
-                <NavItem>
-                  <NavLink href="/login">Login</NavLink>
-                </NavItem>
               </div>
               <div>
                 <UncontrolledDropdown nav inNavbar>

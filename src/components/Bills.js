@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
+import garbage from "../images/garbage.svg"
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -22,13 +23,16 @@ function Bills() {
         <div sm={6} className="landing-col services-main">
           <div className="services-container">
             <div className="services">
-              <img src={rent} alt="rent" height="150px" />
+              <img src={rent} alt="rent" height="100px" />
             </div>
             <div className=" services">
-              <img src={Water} alt="water" height="150px" />
+              <img src={Water} alt="water" height="100px" />
             </div>
             <div className="services">
-              <img src={Elec} alt="electricity" height="150px" />
+              <img src={Elec} alt="electricity" height="100px" />
+            </div>
+            <div className="services">
+              <img src={garbage} alt="garbage" height="100px" />
             </div>
           </div>
           <div className="services-description">
