@@ -1,56 +1,74 @@
-import Cookies from "js-cookie";
-import Rent from "../images/Rent.jpg";
-import "../components/style.css";
-import MyNavbar from "./Navbar";
 import Footer from "./Footer";
+import MyNavbar from "./Navbar";
+import { Card, CardBody, CardTitle, Table, Button } from "reactstrap";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
 import garbage from "../images/garbage.svg";
-import { Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import "./style.css";
 
 function Bills() {
-  Cookies.set("isLoggedIn", "false");
-  const isLoggedIn = Cookies.get("isLoggedIn");
-  console.log(isLoggedIn);
   return (
     <>
       <MyNavbar />
-
-      <div className="landing">
-        <div sm={6} className="landing-col services-main">
-          <div className="services-container">
-            <div className="services">
-              <img src={rent} alt="rent" height="100px" />
-            </div>
-            <div className=" services">
-              <img src={Water} alt="water" height="100px" />
-            </div>
-            <div className="services">
-              <img src={Elec} alt="electricity" height="100px" />
-            </div>
-            <div className="services">
-              <img src={garbage} alt="garbage" height="100px" />
-            </div>
-          </div>
-          <div className="services-description">
-            <p> Pay rent and other bills at the click of a Button.</p>
-          </div>
-          <div className="services-description">
-            <Link to="login">
-              <Button className="services-button">Login</Button>
-            </Link>
-            <Link to="register">
-              <Button className="services-button">Sign Up</Button>
-            </Link>
-          </div>
+      <div className="billsContainer">
+        <div>
+          <Card>
+            <CardTitle>Unpaid Bills</CardTitle>
+            <CardBody>
+              <Table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Bill</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>
+                      <img src={rent} alt="rent" height="40px" /> Rent
+                    </td>
+                    <td>Ksh 14,500</td>
+                    <td>
+                      <button className="btn">pay</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>
+                      <img src={Water} alt="rent" height="40px" /> Water
+                    </td>
+                    <td>Ksh 500</td>
+                    <td>
+                      <button className="btn">pay</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>
+                      <img src={garbage} alt="rent" height="40px" /> Garbage
+                    </td>
+                    <td>Ksh 200</td>
+                    <td>
+                      <button className="btn">pay</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>
         </div>
-        <div sm={6} className="landing-col image">
-          <img className="mainImage" src={Rent} id="mainImage" />
+        <div>
+          {" "}
+          <Card>
+            <CardTitle>Receipts</CardTitle>
+            <CardBody></CardBody>
+          </Card>
         </div>
       </div>
-
       <Footer />
     </>
   );

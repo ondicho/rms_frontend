@@ -41,7 +41,10 @@ export default class MyNavbar extends React.Component {
             <Nav className="ml-auto parentNav" navbar>
               <div className="navigation">
                 <NavItem>
-                  <NavLink href="/">Bills</NavLink>
+                  <NavLink href="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/bills">My Bills</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/payments">Make Payments</NavLink>
@@ -59,7 +62,7 @@ export default class MyNavbar extends React.Component {
 
                   <DropdownMenu end>
                     <DropdownItem>
-                      <Link to="profile">View Profile</Link>
+                    <NavLink href="/profile">View Profile</NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>Logout</DropdownItem>

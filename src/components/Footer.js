@@ -60,5 +60,4 @@ const FooterContainer = styled.footer`
     padding-bottom: 2rem;
     
   }
-  
 `;

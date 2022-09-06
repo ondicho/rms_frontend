@@ -9,6 +9,10 @@ import { stkpush } from "../Api's/Calls";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
 import "./style.css";
+import Water from "../images/water-tap.png";
+import Elec from "../images/idea.png";
+import house from "../images/rent.png";
+import garbage from "../images/garbage.svg";
 
 function Dashboard() {
   const [rent, setRent] = useState("");
@@ -40,7 +44,7 @@ function Dashboard() {
     <>
       <MyNavbar />
       <Row className="mainContainer ">
-        <Col sm={4}>
+        {/* <Col sm={4}>
           <Card
             id="paymenytCard1"
             body
@@ -89,7 +93,24 @@ function Dashboard() {
               Buy Tokens
             </Button>
           </Card>
-        </Col>
+        </Col> */}
+        <div className="services-container">
+            <div className="services">
+              <img src={house} alt="rent" height="100px" />
+            </div>
+            <div className=" services">
+              <img src={Water} alt="water" height="100px" />
+            </div>
+            <div className="services">
+              <img src={Elec} alt="electricity" height="100px" />
+            </div>
+            <div className="services">
+              <img src={garbage} alt="garbage" height="100px" />
+            </div>
+          </div>
+        <div className="my-board">
+          <h2>My Board</h2>
+        </div>
       </Row>
       <Footer />
     </>

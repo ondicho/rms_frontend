@@ -3,8 +3,28 @@
     margin: 0;
 }
 
+.dropdown-menu.dropdown-menu-end.show {
+    background-color: var(--fiery-rose);
+}
+
+.dropdown-menu.dropdown-menu-end.show :hover {
+    background-color: #ffffff;
+    color: var(--fiery-rose);
+}
+
+.dropdown-menu.dropdown-menu-end.show a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu.dropdown-menu-end.show a:hover {
+    text-decoration: none;
+    color: var(--fiery-rose);
+}
+
 .color-nav {
     background-color: var(--fiery-rose);
+    /* font-weight: bold; */
 }
 
 .paymentbtn {
@@ -12,12 +32,6 @@
     padding: 10px;
     min-width: 100px;
 }
-
-
-/* .btn:hover {
-    background-color: var(--coral);
-    color: white;
-} */
 
 .paymentCards {
     margin-top: 10px;
@@ -200,6 +214,18 @@ button.services-button.btn.btn-secondary:hover {
     border: none;
 }
 
+.card{
+    margin: 10px;
+}
+
+.billButton{
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    text-align:'center'
+    
+}
+
 
 
 @media only screen and (min-width: 600px) {
@@ -261,5 +287,15 @@ button.services-button.btn.btn-secondary:hover {
 
     .landing-col.image {
         display: none;
+    }
+
+    .footer-middle .container .row {
+        display: none;
+    }
+    .main-footer{
+        height:20px;
+    }
+    .mainContainer{
+        height: auto !important;
     }
 }
