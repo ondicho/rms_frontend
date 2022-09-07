@@ -19,41 +19,41 @@ function Bills() {
               <Table>
                 <thead>
                   <tr>
-                    <th>#</th>
                     <th>Bill</th>
+                    <th>Bal</th>
                     <th>Amount</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
                     <td>
-                      <img src={rent} alt="rent" height="40px" /> Rent
+                      <img src={rent} alt="rent" height="30px" /> Rent
                     </td>
+                    <td>Ksh 4,500</td>
                     <td>Ksh 14,500</td>
                     <td>
-                      <button className="btn">pay</button>
+                      <button className="billButton">pay</button>
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
                     <td>
-                      <img src={Water} alt="rent" height="40px" /> Water
+                      <img src={Water} alt="rent" height="30px" /> Water
                     </td>
                     <td>Ksh 500</td>
+                    <td>Ksh 500</td>
                     <td>
-                      <button className="btn">pay</button>
+                      <button className="billButton">pay</button>
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
                     <td>
-                      <img src={garbage} alt="rent" height="40px" /> Garbage
+                      <img src={garbage} alt="rent" height="30px" /> Garbage
                     </td>
+                    <td>Ksh 100</td>
                     <td>Ksh 200</td>
                     <td>
-                      <button className="btn">pay</button>
+                      <button className="billButton">pay</button>
                     </td>
                   </tr>
                 </tbody>

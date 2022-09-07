@@ -219,10 +219,21 @@ button.services-button.btn.btn-secondary:hover {
 }
 
 .billButton{
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
-    text-align:'center'
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    text-align:'center';
+    border: none;
+    box-shadow: 0 0 0.3rem #0000004d;
+    border-radius: 0.3rem;
+    padding: 5px;
+    /* padding: 1rem 1.5rem; */
+    font-weight: 600;
+    background-color: #ffffff;
+    color: var(--fiery-rose);
+    border: 1px solid var(--fiery-rose);
+    cursor: pointer;
+    outline: none !important;
     
 }
 
