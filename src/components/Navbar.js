@@ -15,7 +15,7 @@ import {
 
 import { MdAccountCircle } from "react-icons/md";
 import "./style.css";
-import { Link } from "react-router-dom";
+
 
 export default class MyNavbar extends React.Component {
   constructor(props) {

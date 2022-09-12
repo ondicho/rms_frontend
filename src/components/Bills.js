@@ -1,6 +1,17 @@
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
-import { Card, CardBody, CardTitle, Table, Button } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  Table,
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Col,
+} from "reactstrap";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
@@ -65,7 +76,28 @@ function Bills() {
           {" "}
           <Card>
             <CardTitle>Receipts</CardTitle>
-            <CardBody></CardBody>
+            <CardBody>
+              <Form>
+                <FormGroup row>
+                  <Label sm={2} for="date">
+                    Payments Done from
+                  </Label>
+                  <Col sm={10}>
+                    <Input
+                      type="date"
+                      name="date"
+                      id="date"
+                      placeholder="Fundi will visit to fix"
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup check row>
+                  <Col sm={{ size: 10, offset: 2 }}>
+                    <Button className="submit">Submit</Button>
+                  </Col>
+                </FormGroup>
+              </Form>
+            </CardBody>
           </Card>
         </div>
       </div>
