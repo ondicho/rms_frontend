@@ -3,19 +3,34 @@ import { Link } from "react-router-dom";
 import "./auth.css";
 import "./style.css";
 import { Button } from "reactstrap";
-
+import Cookies from "js-cookie";
+import { login } from "../Api/Calls.js";
 
 function Login() {
+  Cookies.set("isLoggedIn", "false");
+  const [error, setError] = useState("");
   const [loginData, setLoginData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(loginData.email);
-    console.log(loginData.password);
+    var data = new FormData();
+    data.append("username", loginData.username);
+    data.append("password", loginData.password);
+    login(data).then((res) => {
+      if ("access" in res) {
+        // set token & redirect
+        console.log(res);
+        Cookies.set("token", res.access);
+        Cookies.set("isLoggedIn", "true");
+        window.location.href = "/";
+      } else {
+        // display error
+        setError(res.detail);
+      }
+    });
   };
   return (
     <>
@@ -31,23 +46,24 @@ function Login() {
             Pay rent and other bills at the click of a button.
           </p>
           <form method="post" className="form-action" onSubmit={handleSubmit}>
+            <div className="error">{error}</div>
             <div className="form-group">
               <label className="form-label">
                 Email <span>*</span>
               </label>
               <input
-                type="email"
-                placeholder="E.g. example.email.com"
+                type="text"
+                placeholder="username"
                 className="form-input"
-                value={loginData.email}
+                value={loginData.username}
                 onChange={(e) =>
-                  setLoginData({ ...loginData, email: e.target.value })
+                  setLoginData({ ...loginData, username: e.target.value })
                 }
               />
             </div>
             <div className="form-group">
               <label className="form-label">
-                Password <span>*</span>
+                password <span>*</span>
               </label>
               <input
                 type="password"

@@ -1,18 +1,13 @@
 import React, { useRef, useState } from "react";
-import {
-  Button, Card,
-  CardText,
-  CardTitle, Col, Input,
-  InputGroup, Row
-} from "reactstrap";
-import { stkpush } from "../Api's/Calls";
+import { Row } from "reactstrap";
+import { stkpush } from "../Api/Calls";
+import garbage from "../images/garbage.svg";
+import Elec from "../images/idea.png";
+import house from "../images/rent.png";
+import Water from "../images/water-tap.png";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
 import "./style.css";
-import Water from "../images/water-tap.png";
-import Elec from "../images/idea.png";
-import house from "../images/rent.png";
-import garbage from "../images/garbage.svg";
 
 function Dashboard() {
   const [rent, setRent] = useState("");
