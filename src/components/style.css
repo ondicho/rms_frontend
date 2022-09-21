@@ -93,6 +93,10 @@
     color: #4c5f6b;
 }
 
+.billsContainer{
+    min-height: calc(100vh - 348.8px); 
+}
+
 .card {
     border-radius: 0.3rem;
     box-shadow: 0 0 0.3rem #0000004d;

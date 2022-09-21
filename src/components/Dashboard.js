@@ -30,6 +30,7 @@ function Dashboard() {
       let resp = JSON.parse(JSON.stringify(res));
       setRent(resp);
     });
+    console.log("test")
 
     // ref.current.text=<Alert color="success">
     //     Payment prompt sent to your registered phone number
@@ -91,7 +92,7 @@ function Dashboard() {
         </Col> */}
         <div className="services-container">
             <div className="services">
-              <img src={house} alt="rent" height="100px" />
+              <img src={house} alt="rent" height="100px"  onClick={payRent}/>
             </div>
             <div className=" services">
               <img src={Water} alt="water" height="100px" />

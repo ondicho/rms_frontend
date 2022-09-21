@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
 import {
@@ -11,14 +12,40 @@ import {
   Input,
   Label,
   Col,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
-import rent from "../images/rent.png";
+import rentImg from "../images/rent.png";
 import garbage from "../images/garbage.svg";
 import "./style.css";
+import { stkpush } from "../Api/Calls";
 
 function Bills() {
+  const [rent, setRent] = useState("");
+  const [show, setShow] = useState(false);
+
+  const payRent = (e) => {
+    e.preventDefault();
+    console.log("entry");
+    // alert('Payment prompt sent to your registered phone number')
+    toggle();
+    console.log("mpesa call");
+    stkpush().then((res) => {
+      let resp = JSON.parse(JSON.stringify(res));
+      setRent(resp);
+    });
+  };
+  const toggle = (e) => {
+    setShow(true);
+  };
+  const dismiss = (e) => {
+    setShow(false);
+  };
+
   return (
     <>
       <MyNavbar />
@@ -39,12 +66,14 @@ function Bills() {
                 <tbody>
                   <tr>
                     <td>
-                      <img src={rent} alt="rent" height="30px" /> Rent
+                      <img src={rentImg} alt="rent" height="30px" /> Rent
                     </td>
                     <td>Ksh 4,500</td>
                     <td>Ksh 14,500</td>
                     <td>
-                      <button className="billButton">pay</button>
+                      <button className="billButton" onClick={payRent}>
+                        pay
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -54,7 +83,9 @@ function Bills() {
                     <td>Ksh 500</td>
                     <td>Ksh 500</td>
                     <td>
-                      <button className="billButton">pay</button>
+                      <button className="billButton" onClick={toggle}>
+                        pay
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -64,13 +95,27 @@ function Bills() {
                     <td>Ksh 100</td>
                     <td>Ksh 200</td>
                     <td>
-                      <button className="billButton">pay</button>
+                      <button className="billButton" onClick={payRent}>
+                        pay
+                      </button>
                     </td>
                   </tr>
                 </tbody>
               </Table>
             </CardBody>
           </Card>
+          <Modal isOpen={show} toggle={dismiss}>
+            <ModalHeader toggle={dismiss}>Make Payment</ModalHeader>
+            <ModalBody>Sending a payment prompt to your phone</ModalBody>
+            <ModalFooter>
+              <Button color="primary" onClick={dismiss}>
+                Verify Payment
+              </Button>{" "}
+              <Button color="secondary" onClick={dismiss}>
+                Cancel
+              </Button>
+            </ModalFooter>
+          </Modal>
         </div>
         <div>
           {" "}
