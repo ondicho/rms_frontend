@@ -1,4 +1,5 @@
-const base_url = "http://127.0.0.1:8000/";
+// const base_url = "http://127.0.0.1:8000/";
+const base_url="http://3.252.82.138:5000/";
 
 export const stkpush = () => {
   return fetch(base_url + "mpesa/stk/", {
