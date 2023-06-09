@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import "./components/style.css";
 import Tickets from "./components/Tickets";
 import Bills from "./components/Bills";
+import Receipt from "./components/Receipt";
 
 Cookies.set("isLoggedIn", "true");
 const isLoggedIn = Cookies.get("isLoggedIn");
@@ -26,6 +27,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/bills" element={<Bills />} />
+          <Route path="/receipts" element={<Receipt />} />
 
         </Routes>
       </BrowserRouter>

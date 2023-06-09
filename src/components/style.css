@@ -93,8 +93,8 @@
     color: #4c5f6b;
 }
 
-.billsContainer{
-    min-height: calc(100vh - 348.8px); 
+.billsContainer {
+    min-height: calc(100vh - 348.8px);
 }
 
 .card {
@@ -127,13 +127,13 @@
 }
 
 
-.main-image {
+/* .main-image {
     background: url("../images/mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #f1f1f1;
-}
+} */
 
 .col-sm-4 {
     margin-top: 5rem;
@@ -167,11 +167,17 @@
 }
 
 .landing-col.image img {
-    width: 100%;
+
+    /* width: 100%;
     height: 100%;
     min-height: 100%;
     min-width: 100%;
-    object-fit: cover;
+    object-fit: cover; */
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .services img {
@@ -218,15 +224,15 @@ button.services-button.btn.btn-secondary:hover {
     border: none;
 }
 
-.card{
+.card {
     margin: 10px;
 }
 
-.billButton{
+.billButton {
     height: 30px;
     min-height: 30px;
     max-height: 30px;
-    text-align:'center';
+    text-align: 'center';
     border: none;
     box-shadow: 0 0 0.3rem #0000004d;
     border-radius: 0.3rem;
@@ -238,9 +244,26 @@ button.services-button.btn.btn-secondary:hover {
     border: 1px solid var(--fiery-rose);
     cursor: pointer;
     outline: none !important;
-    
+
 }
 
+
+.accept-icon {
+    margin: 20px 0;
+}
+
+.paymentReceived{
+    text-align: center;
+}
+
+.profileCard{
+    width:100%;
+    margin-left: 10rem;
+}
+
+.profileCard p {
+    margin: 1rem;
+}
 
 
 @media only screen and (min-width: 600px) {
@@ -293,11 +316,11 @@ button.services-button.btn.btn-secondary:hover {
 
     .landing-col {
         flex: 1;
+        /* display: block; */
     }
 
-    img.mainImage {
-        height: 200px !important;
-        object-fit: cover;
+    img#mainImage {
+        display: none;
     }
 
     .landing-col.image {
@@ -307,10 +330,12 @@ button.services-button.btn.btn-secondary:hover {
     .footer-middle .container .row {
         display: none;
     }
-    .main-footer{
-        height:20px;
+
+    .main-footer {
+        height: 20px;
     }
-    .mainContainer{
+
+    .mainContainer {
         height: auto !important;
     }
 }

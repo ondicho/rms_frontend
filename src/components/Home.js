@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Water from "../images/water-tap.png";
 import Elec from "../images/idea.png";
 import rent from "../images/rent.png";
+import main from "../images/main.svg";
 import garbage from "../images/garbage.svg";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -47,7 +48,7 @@ function Home() {
           </div>
         </div>
         <div sm={6} className="landing-col image">
-          <img className="mainImage" src={Rent} id="mainImage" />
+          <img  src={main} id="mainImage" />
         </div>
       </div>
 

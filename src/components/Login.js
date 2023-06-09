@@ -1,10 +1,10 @@
+import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
+import { login } from "../Api/Calls.js";
 import "./auth.css";
 import "./style.css";
-import { Button } from "reactstrap";
-import Cookies from "js-cookie";
-import { login } from "../Api/Calls.js";
 
 function Login() {
   Cookies.set("isLoggedIn", "false");

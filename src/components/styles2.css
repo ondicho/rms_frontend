@@ -1,0 +1,105 @@
+.receiptContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 348.8px); 
+}
+.tata{
+    border: red;
+}
+
+
+.clickable-card {
+    display: block;
+    max-width: auto;
+    max-height: fit-content;
+    margin-inline: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center center;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .clickable-card h2 {
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .clickable-card img {
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+  }
+
+
+.article-body {
+  padding: 24px;
+}
+
+.clickable-card h2 {
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.profile-card img{
+  max-height: 150px;
+}
+
+.clickable-card{
+  border-radius: 2rem;
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+}
+
+@media only screen and (max-width: 450px) {
+  .profile-card img{
+    min-height: 75px;
+
+  }
+
+  .clickable-card h2 {
+    margin: 0 0 9px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 0.9rem;
+    letter-spacing: 0.006em;
+    transition: color 0.3s ease-out;
+  }
+
+  .clickable-card {
+    display: block;
+    max-width: auto;
+    max-height: fit-content;
+    margin-inline: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center center;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    color: black;
+    font-size: 0.4rem;
+    letter-spacing: 0.006em;
+  }
+
+  .footer{
+    max-height: 5rem;
+  }
+}

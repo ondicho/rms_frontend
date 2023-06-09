@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardBody,
@@ -18,25 +19,36 @@ import {
   ModalFooter,
 } from "reactstrap";
 import Water from "../images/water-tap.png";
-import Elec from "../images/idea.png";
+import receivedPayment from "../images/received.png";
 import rentImg from "../images/rent.png";
 import garbage from "../images/garbage.svg";
 import "./style.css";
-import { stkpush } from "../Api/Calls";
+import { stkpush, authorize } from "../Api/Calls";
 
 function Bills() {
   const [rent, setRent] = useState("");
   const [show, setShow] = useState(false);
+  const [showAccept, setShowAccept] = useState(false);
+  const [paidAmount, setPaidAmount] = useState(0);
+  const [paidCode, setPaidCode] = useState(0);
+
+  const [rentAmount, Wateramount] = [14500, 500];
 
   const payRent = (e) => {
     e.preventDefault();
-    console.log("entry");
-    // alert('Payment prompt sent to your registered phone number')
-    toggle();
-    console.log("mpesa call");
-    stkpush().then((res) => {
+    var data = new FormData();
+    data.append("amount", "14500");
+    // stkpush().then((res) => {
+    //   let resp = JSON.parse(JSON.stringify(res));
+    //   setRent(resp);
+    // });
+    authorize(data).then((res) => {
       let resp = JSON.parse(JSON.stringify(res));
-      setRent(resp);
+      toggle();
+      setPaidAmount(resp["Amount"]);
+      setPaidCode(resp["MpesaReceiptNumber"]);
+      console.log("payment successful");
+      console.log(resp);
     });
   };
   const toggle = (e) => {
@@ -44,6 +56,14 @@ function Bills() {
   };
   const dismiss = (e) => {
     setShow(false);
+  };
+
+  const dismissAccept = (e) => {
+    setShowAccept(false);
+  };
+
+  const toggleAccept = (e) => {
+    setShowAccept(true);
   };
 
   return (
@@ -108,10 +128,39 @@ function Bills() {
             <ModalHeader toggle={dismiss}>Make Payment</ModalHeader>
             <ModalBody>Sending a payment prompt to your phone</ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={dismiss}>
+              <Button
+                color="primary"
+                onClick={() => {
+                  dismiss();
+                  toggleAccept();
+                }}
+              >
                 Verify Payment
               </Button>{" "}
               <Button color="secondary" onClick={dismiss}>
+                Cancel
+              </Button>
+            </ModalFooter>
+          </Modal>
+
+          {/* payment received modal */}
+          <Modal
+            isOpen={showAccept}
+            toggle={dismissAccept}
+            className="paymentReceived"
+          >
+            <ModalHeader toggle={dismissAccept}></ModalHeader>
+            <ModalBody>
+              <p>Payment Sent</p>
+              <div className="accept-icon">
+                <img src={receivedPayment} alt="payment received" />
+              </div>
+              <p>Sent Ksh {paidAmount} For Rent</p>
+              <p>Mpesa Ref : {paidCode}</p>
+          
+            </ModalBody>
+            <ModalFooter>
+              <Button color="secondary" onClick={dismissAccept}>
                 Cancel
               </Button>
             </ModalFooter>
@@ -138,7 +187,9 @@ function Bills() {
                 </FormGroup>
                 <FormGroup check row>
                   <Col sm={{ size: 10, offset: 2 }}>
-                    <Button className="submit">Submit</Button>
+                    <Link to="/receipts">
+                      <Button>Submit</Button>
+                    </Link>
                   </Col>
                 </FormGroup>
               </Form>
