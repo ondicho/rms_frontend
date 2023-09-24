@@ -40,7 +40,7 @@ function Dashboard() {
     <>
       <MyNavbar />
       <Row className="mainContainer ">
-        {/* <Col sm={4}>
+        <Col sm={4}>
           <Card
             id="paymenytCard1"
             body
@@ -89,7 +89,7 @@ function Dashboard() {
               Buy Tokens
             </Button>
           </Card>
-        </Col> */}
+        </Col>
         <div className="services-container">
             <div className="services">
               <img src={house} alt="rent" height="100px"  onClick={payRent}/>

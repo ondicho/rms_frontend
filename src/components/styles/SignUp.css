@@ -1,0 +1,90 @@
+.signup-container { 
+    display: flex; 
+    height: 100vh; 
+  } 
+ 
+  .left-half { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f7f7f7; 
+    padding: 20px; 
+  } 
+ 
+  .right-half { 
+    flex: 1; 
+    background-image: url('/home/skylar/Documents/Web_App/SakaKeja/frontend/src/images/UI (12).jpg'); 
+    background-size: cover; 
+    background-position: center; 
+  } 
+ 
+  form { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  } 
+ 
+  form input, 
+  form select, 
+  form button { 
+    margin-bottom: 10px; 
+    width: 100%; 
+    max-width: 400px; 
+  } 
+ 
+  .signup-button { 
+    width: 106%; 
+    max-width: 500px; 
+    background-color: #3A5B22; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-left: 0px; 
+  } 
+ 
+  .sign-up-options { 
+    text-align: center; 
+    margin-top: 10px;  
+  } 
+ 
+  .signup-buttons-wrapper { 
+    display: flex; 
+    justify-content: center; 
+  } 
+ 
+  .signup-google-button { 
+    background-image: url('../images/Google.png'); 
+  } 
+ 
+  .signup-apple-button { 
+    background-image: url('../images/Apple2.jpg'); 
+  } 
+ 
+  .signup-google-button, 
+  .signup-apple-button { 
+    background-repeat: no-repeat; 
+    background-position: left center; 
+    background-size: 15%; 
+    height: 40px; 
+    color: black; 
+    border: none; 
+    padding: 10px 20px 10px 40px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-right: 10px;  
+    max-width: 200px; 
+  } 
+ 
+  select { 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 10px; 
+  }

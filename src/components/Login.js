@@ -1,96 +1,118 @@
-import Cookies from "js-cookie";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
-import { login } from "../Api/Calls.js";
-import "./auth.css";
-import "./style.css";
-
-function Login() {
-  Cookies.set("isLoggedIn", "false");
-  const [error, setError] = useState("");
-  const [loginData, setLoginData] = useState({
-    username: "",
-    password: "",
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    var data = new FormData();
-    data.append("username", loginData.username);
-    data.append("password", loginData.password);
-    login(data).then((res) => {
-      if ("access" in res) {
-        // set token & redirect
-        console.log(res);
-        Cookies.set("token", res.access);
-        Cookies.set("isLoggedIn", "true");
-        window.location.href = "/";
-      } else {
-        // display error
-        setError(res.detail);
-      }
-    });
-  };
-  return (
-    <>
-      <div className="main-container reverse">
-        <div className="mini-container larger">
-          <div className="back-home">
-            <Link to="/">
-              <Button className="services-button">Home</Button>
-            </Link>
-          </div>
-          <h1 className="login-title">RMS Login</h1>
-          <p className="login-text">
-            Pay rent and other bills at the click of a button.
-          </p>
-          <form method="post" className="form-action" onSubmit={handleSubmit}>
-            <div className="error">{error}</div>
-            <div className="form-group">
-              <label className="form-label">
-                Email <span>*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="username"
-                className="form-input"
-                value={loginData.username}
-                onChange={(e) =>
-                  setLoginData({ ...loginData, username: e.target.value })
-                }
-              />
-            </div>
-            <div className="form-group">
-              <label className="form-label">
-                password <span>*</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Type your password here"
-                className="form-input"
-                value={loginData.password}
-                onChange={(e) =>
-                  setLoginData({ ...loginData, password: e.target.value })
-                }
-              />
-            </div>
-            <div className="button-group">
-              <button className="btn" href="/register">
-                Login
-              </button>
-            </div>
-          </form>
-          <p className="login-text">
-            <Link to="/register" className="redirect">
-              Click here to register
-            </Link>
-          </p>
-        </div>
-        <div className="mini-container smaller"></div>
-      </div>
-    </>
-  );
-}
-
-export default Login;
+import React, { useState } from 'react'; 
+ import { useNavigate } from 'react-router-dom'; 
+ import '../styles/Login.css'; 
+  
+ function Login() { 
+   const [email, setEmail] = useState(''); 
+   const [password, setPassword] = useState(''); 
+   const [showPassword, setShowPassword] = useState(false); 
+   const navigate = useNavigate(); 
+  
+   const handleLogin = async (event) => { 
+     event.preventDefault(); 
+  
+     const loginData = { 
+       email, 
+       password, 
+     }; 
+  
+     try { 
+       const response = await fetch('http://127.0.0.1:5000/login', { 
+         method: 'POST', 
+         headers: { 
+           'Content-Type': 'application/json', 
+         }, 
+         body: JSON.stringify(loginData), 
+       }); 
+  
+       const data = await response.json(); 
+  
+       if (response.ok) { 
+         const refreshToken = data.refresh_token; 
+         saveRefreshToken(refreshToken); 
+  
+         if ('unverified' in data) { 
+           alert('Please verify your email before logging in.'); 
+         } else if ('owner' in data || 'tenant' in data) { 
+           const userType = data.owner ? 'owner' : 'tenant'; 
+           localStorage.setItem('user_type', userType); 
+  
+           if ('user_id' in data) { 
+             localStorage.setItem('user_id', data.user_id); 
+           } 
+           localStorage.setItem('access_token', data[userType]); 
+           console.log(data) 
+  
+           navigate(`/${userType}-dashboard`); 
+         } else { 
+           alert('Unknown user type. Please contact support.'); 
+         } 
+       } else { 
+         alert(`${JSON.stringify(data)}`); 
+       } 
+     } catch (error) { 
+       console.error('Error occurred during login:', error); 
+     } 
+   }; 
+  
+   const saveRefreshToken = (token) => { 
+     localStorage.setItem('refresh_token', token); 
+   }; 
+  
+   return ( 
+     <div className="login-container"> 
+       <div className="left-half"> 
+         <h2>Welcome back!</h2> 
+         <p>Enter your credentials for Access your account</p> 
+         <div className="login-form"> 
+           <form onSubmit={handleLogin}> 
+             <div className="email-container"> 
+               <label>Email address:</label> 
+               <input 
+                 type="email" 
+                 value={email} 
+                 onChange={(e) => setEmail(e.target.value)} 
+                 className="email-input" 
+               /> 
+             </div> 
+             <div className="password-container"> 
+               <div className="password-input"> 
+                 <label>Password:</label> 
+                 <input 
+                   type={showPassword ? 'text' : 'password'} 
+                   value={password} 
+                   onChange={(e) => setPassword(e.target.value)} 
+                   className="input-field" 
+                 /> 
+                 <div className="show-password"> 
+                   <input 
+                     type="checkbox" 
+                     checked={showPassword} 
+                     onChange={() => setShowPassword(!showPassword)} 
+                   /> 
+                   <label className="text">Show Password</label> 
+                 </div> 
+               </div> 
+             </div> 
+             <button className="login-button" type="submit"> 
+               Login 
+             </button> 
+           </form> 
+         </div> 
+         <div className="sign-in-options"> 
+           <p>Or sign in with:</p> 
+           <button className="signin-google-button">Sign in with Google</button> 
+           <button className="signin-apple-button">Sign in with Apple</button> 
+         </div> 
+         <div className="signup-option"> 
+           <p> 
+             Don't have an account? <a href="/signup">Sign Up</a> 
+           </p> 
+         </div> 
+       </div> 
+       <div className="right-half"></div> 
+     </div> 
+   ); 
+ } 
+  
+ export default Login;

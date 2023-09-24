@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import "../App.css";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   return (
@@ -13,10 +15,11 @@ function Footer() {
               <h4>Quick Links</h4>
               <ul className="list-unstyled">
                 <li>
+                  
                   <StyledLink to="/">Home</StyledLink>
                 </li>
                 <li>
-                  <StyledLink to="/payments">Make Payments</StyledLink>
+                  <StyledLink to="/bills">Make Payments</StyledLink>
                 </li>
                 <li>
                   <StyledLink to="/tickets">Raise Ticket</StyledLink>
@@ -26,7 +29,7 @@ function Footer() {
           </div>
           <div className="footer-bottom">
               <p className="text-xs-center">
-                &copy;{new Date().getFullYear()} Copyright : Albert Ondicho
+                &copy;{new Date().getFullYear()} 
               </p>
             </div>
           </div>
@@ -49,5 +52,15 @@ const FooterContainer = styled.footer`
     padding-top: 3rem;
     padding-bottom: 2rem;
     
+  }
+`;
+
+const StyledLink = styled(Link)`
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #ff5733; /* Change to your preferred hover color */
   }
 `;

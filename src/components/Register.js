@@ -1,67 +1,85 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./auth.css";
-import { Button } from "reactstrap";
-
-function Register() {
-  return (
-    <>
-      <>
-        <div className="main-container">
-          <div className="mini-container smaller"></div>
-          <div className="mini-container larger">
-            <div className="back-home">
-              <Link to="/">
-                <Button className="services-button">Home</Button>
-              </Link>
-            </div>
-            <h1 className="login-title">Sign Up</h1>
-            <p className="login-text">
-              Pay rent and other bills at the click of a button.
-            </p>
-            <form action="" method="post" className="form-action">
-              <div className="form-group">
-                <label for="" className="form-label">
-                  Email <span>*</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="E.g. example.email.com"
-                  className="form-input"
-                />
-              </div>
-              <div className="form-group">
-                <label for="password1" className="form-label">
-                  Password <span>*</span>
-                </label>
-                <input
-                  type="password1"
-                  placeholder="Type your password here"
-                  className="form-input"
-                />
-                <label for="password2" className="form-label">
-                  Re-enter Password <span>*</span>
-                </label>
-                <input
-                  type="password2"
-                  placeholder="Type your password here"
-                  className="form-input"
-                />
-              </div>
-
-              <div className="button-group">
-                <button className="btn">Register</button>
-              </div>
-            </form>
-            <p className="login-text">
-              <Link to="/login" className="redirect">
-                Already have an account. Login
-              </Link>
-            </p>
-          </div>
-        </div>
-      </>
-    </>
-  );
-}
-export default Register;
+import React, { useState } from 'react'; 
+ import { useNavigate } from 'react-router-dom'; 
+ import '../styles/SignUp.css'; 
+  
+ const Register = () => { 
+   const [formData, setFormData] = useState({ 
+     first_name: '', 
+     last_name: '', 
+     email: '', 
+     phone_number: '', 
+     password: '', 
+     user_type: '', 
+   }); 
+  
+   const handleChange = (event) => { 
+     const { name, value } = event.target; 
+     setFormData((prevFormData) => ({ ...prevFormData, [name]: value })); 
+   }; 
+  
+   const navigate = useNavigate();  
+  
+   const handleSubmit = (event) => { 
+     event.preventDefault(); 
+  
+     if (formData.user_type !== 'tenant' && formData.user_type !== 'landlord') { 
+       alert('Invalid user_type. Please select "tenant" or "owner".'); 
+       return; 
+     } 
+  
+     fetch('http://127.0.0.1:5000/users', { 
+       method: 'POST', 
+       headers: { 
+         'Content-Type': 'application/json', 
+       }, 
+       body: JSON.stringify(formData), 
+     }) 
+       .then((response) => { 
+         if (!response.ok) { 
+           throw new Error('Network response was not ok'); 
+         } 
+         console.log('User created successfully!'); 
+  
+         alert('User created successfully!'); 
+  
+         navigate('/login'); 
+       }) 
+       .catch((error) => { 
+         console.error('Error creating user:', error); 
+       }); 
+   }; 
+  
+   return ( 
+     <div className="signup-container"> 
+       <div className="left-half"> 
+         <h2>Get Started Now</h2> 
+         <form onSubmit={handleSubmit}> 
+           <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required /> 
+           <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required /> 
+           <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required /> 
+           <input type="text" name="phone_number" placeholder="Phone Number" value={formData.phone_number} onChange={handleChange} required /> 
+           <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required /> 
+           <select name="user_type" value={formData.user_type} onChange={handleChange} required> 
+             <option value="">Select User Type</option> 
+             <option value="tenant">Tenant</option> 
+             <option value="landlord">Landlord</option> 
+           </select> 
+           <button className="signup-button" type="submit"> 
+             Sign Up 
+           </button> 
+           <div className="sign-up-options"> 
+             <p>Or sign up with:</p> 
+             <div className="signup-buttons-wrapper"> 
+                 <button className="signup-google-button">Sign up with Google</button> 
+                 <button className="signup-apple-button">Sign up with Apple</button> 
+             </div> 
+           </div> 
+         </form> 
+       </div> 
+       <div className="right-half"> 
+       </div> 
+     </div> 
+   ); 
+ }; 
+  
+ export default Register;
