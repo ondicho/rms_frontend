@@ -4,7 +4,7 @@ import PostProperty from './PostProperty';
 import ViewProperties from './ViewProperties';
 import ViewPaymentBalance from './ViewPayments';
 import Settings from './Settings';
-import "../styles/OwnerDashboard.css";
+// import "../styles/OwnerDashboard.css";
 
 function LandLordDashboard() {
   const navigate = useNavigate();
