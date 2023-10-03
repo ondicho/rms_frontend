@@ -9,6 +9,8 @@ import "./components/style.css";
 import Tickets from "./components/Tickets";
 import Bills from "./components/Bills";
 import Receipt from "./components/Receipt";
+import LandLordDashboard from "./components/LandlordDashboard";
+import TenantDashboard from "./components/TenantDashoard";
 
 Cookies.set("isLoggedIn", "true");
 const isLoggedIn = Cookies.get("isLoggedIn");
@@ -28,6 +30,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/bills" element={<Bills />} />
           <Route path="/receipts" element={<Receipt />} />
+          <Route path="/landlord+dashboard" element={<LandLordDashboard />} />
+          <Route path="/tenant+dashboard" element={<TenantDashboard />} />
 
         </Routes>
       </BrowserRouter>

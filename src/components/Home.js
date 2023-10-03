@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import Rent from "../images/Rent.jpg";
+// import Rent from "../images/Rent.jpg";
 import "../components/style.css";
 import MyNavbar from "./Navbar";
 import Footer from "./Footer";
@@ -10,13 +10,13 @@ import main from "../images/main.svg";
 import garbage from "../images/garbage.svg";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import Settings from "./Settings";
 function Home() {
   Cookies.set("isLoggedIn", "false");
   const isLoggedIn = Cookies.get("isLoggedIn");
   console.log(isLoggedIn);
   return (
-    <>
+    <div id="main">
       <MyNavbar />
 
       <div className="landing">
@@ -48,12 +48,12 @@ function Home() {
           </div>
         </div>
         <div sm={6} className="landing-col image">
-          <img  src={main} id="mainImage" />
+          <img  src={main} alt='' id="mainImage" />
         </div>
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

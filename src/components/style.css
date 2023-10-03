@@ -151,7 +151,7 @@
     width: 100%;
     height: 68vh;
     display: flex;
-    background-color: var(--lavender);
+    
     /* gap: 1rem; */
 
 }
@@ -338,4 +338,8 @@ button.services-button.btn.btn-secondary:hover {
     .mainContainer {
         height: auto !important;
     }
+}
+
+#main {
+    background-image: url('https://www.pinterest.com/pin/5840674507737325/');
 }

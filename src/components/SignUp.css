@@ -1,6 +1,8 @@
 .signup-container { 
     display: flex; 
     height: 100vh; 
+     
+
   } 
  
   .left-half { 
@@ -9,13 +11,13 @@
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    background-color: #f7f7f7; 
     padding: 20px; 
+    
   } 
  
   .right-half { 
+    background-image: url('/home/vin/Al/rms_frontend/src/images/UI (12).jpg');
     flex: 1; 
-    background-image: url('/home/skylar/Documents/Web_App/SakaKeja/frontend/src/images/UI (12).jpg'); 
     background-size: cover; 
     background-position: center; 
   } 

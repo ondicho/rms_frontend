@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
  import { useNavigate } from 'react-router-dom'; 
- import '../styles/Login.css'; 
+ import './Login.css'; 
   
  function Login() { 
    const [email, setEmail] = useState(''); 
@@ -106,7 +106,7 @@ import React, { useState } from 'react';
          </div> 
          <div className="signup-option"> 
            <p> 
-             Don't have an account? <a href="/signup">Sign Up</a> 
+             Don't have an account? <a href="/register">Sign Up</a> 
            </p> 
          </div> 
        </div> 
