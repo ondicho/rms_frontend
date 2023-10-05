@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import jwt_decode from 'jwt-decode';
-import '../styles/TenantPropertyReview.css';
+import '../src/styles/TenantPropertyReview.css';
 
 function TenantPropertyReview() {
     const location = useLocation();

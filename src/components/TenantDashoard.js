@@ -4,7 +4,7 @@ import PropertyList from './PropertyList';
 import Movers from './Movers';
 import Settings from './Settings';
 import Payments from './Payments';
-// import "../styles/TenantDashboard.css"
+import "../src/styles/ TenantDashboard.css"
 
 function TenantDashboard() {
   const navigate = useNavigate();

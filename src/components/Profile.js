@@ -7,8 +7,8 @@ import {
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
 import React, { useState } from "react";
-import "./style.css"
-import "./styles2.css"
+import "./src/styles/style.css"
+import "./src/styles/styles2.css"
 import profile from "../images/profile.svg";
 
 

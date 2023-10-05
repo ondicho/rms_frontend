@@ -7,7 +7,7 @@ import house from "../images/rent.png";
 import Water from "../images/water-tap.png";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
-import "./style.css";
+import "./src/styles/style.css";
 
 function Dashboard() {
   const [rent, setRent] = useState("");

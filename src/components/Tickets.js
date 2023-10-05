@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
-import "./style.css";
+import "./src/styles/style.css";
 
 var DatePicker = require("reactstrap-date-picker");
 

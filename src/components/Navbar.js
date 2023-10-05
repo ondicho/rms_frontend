@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 
 import { MdAccountCircle } from "react-icons/md";
-import "./style.css";
+import "./src/styles/style.css";
 
 
 export default class MyNavbar extends React.Component {

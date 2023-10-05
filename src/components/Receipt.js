@@ -1,4 +1,4 @@
-import "./styles2.css"
+import "./src/styles/styles2.css"
 import Footer from "./Footer";
 import MyNavbar from "./Navbar";
 

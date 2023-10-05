@@ -22,7 +22,7 @@ import Water from "../images/water-tap.png";
 import receivedPayment from "../images/received.png";
 import rentImg from "../images/rent.png";
 import garbage from "../images/garbage.svg";
-import "./style.css";
+import "./src/styles/style.css";
 import { stkpush, authorize } from "../Api/Calls";
 
 function Bills() {
