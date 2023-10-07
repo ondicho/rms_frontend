@@ -71,9 +71,3 @@
   }
 }
 
-.home-icon {
-  width: 24px;
-  height: 24px;
-  background-color: #007bff; /* Blue color for illustration */
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}

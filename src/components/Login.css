@@ -33,12 +33,12 @@
   padding: 20px; 
 } 
  
-  .right-half { 
+  /* .right-half { 
     flex: 1; 
     background-image: url('/home/vin/Al/rms_frontend/src/images/UI (12).jpg'); 
     background-size: cover; 
     background-position: center; 
-  } 
+  }  */
  
  
   .email-container { 

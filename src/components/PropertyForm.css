@@ -1,0 +1,43 @@
+/* Add this CSS to a separate .css file (e.g., PropertyForm.css) and import it into your component */
+
+.property-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Optional box shadow */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .submit-button {
+    width: fit-content; /* Make the button width adjust to its content */
+    margin: 0 auto; /* Center the button horizontally */
+    background-color: #fb6376ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff465a; /* Change the color on hover */
+  }
+  

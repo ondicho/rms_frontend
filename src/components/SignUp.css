@@ -15,12 +15,12 @@
     
   } 
  
-  .right-half { 
+  /* .right-half { 
     background-image: url('/home/vin/Al/rms_frontend/src/images/UI (12).jpg');
     flex: 1; 
     background-size: cover; 
     background-position: center; 
-  } 
+  }  */
  
   form { 
     display: flex; 

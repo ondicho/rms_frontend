@@ -1,0 +1,252 @@
+/* Home icon styles */
+.home-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #007bff; /* Blue color for illustration */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Main container styles */
+.main-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar container styles */
+.main-container .sidebar-Container {
+  width: 18%;
+  min-width: 200px;
+  max-width: 200px;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  transition: all 200ms ease-in-out;
+  flex-direction: column;
+}
+
+/* Sidebar links holder styles */
+.main-container .sidebar-Container .sidebar-links-holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Link color */
+.main-container .sidebar-Container .sidebar-links .sidebar-link {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: white;
+  color:  var(--fiery-rose);; /* Set the link text color here */
+  display: flex;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Link hover color */
+.main-container .sidebar-Container .sidebar-links .sidebar-link:hover {
+  background-color: #f0f0f0;
+  color: #f08121; /* Set the link text color on hover here */
+}
+
+/* Active link color */
+.main-container .sidebar-Container .sidebar-links .sidebar-link.active {
+  color: #f08121; /* Set the active link text color here */
+  background-color: #f0f0f0;
+}
+
+/* Last sidebar link styles */
+.main-container .sidebar-Container .sidebar-links:last-child .sidebar-link {
+  color: red;
+}
+
+/* Sidebar link styles */
+.main-container .sidebar-Container .sidebar-links .sidebar-link {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: white;
+  color: #0e5da7;
+  display: flex;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Sidebar link text styles */
+.main-container .sidebar-Container .sidebar-links .sidebar-link .text {
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+}
+
+/* Sidebar link icon styles */
+.main-container .sidebar-Container .sidebar-links .sidebar-link i {
+  transition: all 200ms ease-in-out;
+}
+
+/* Sidebar link hover styles */
+.main-container .sidebar-Container .sidebar-links .sidebar-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Active sidebar link styles */
+.main-container .sidebar-Container .sidebar-links .sidebar-link.active {
+  color: #f08121;
+  background-color: #f0f0f0;
+}
+
+/* Page container styles */
+.main-container .page-container {
+  width: calc(100% - 200px);
+  position: fixed;
+  transition: all 200ms ease-in-out;
+  left: 200px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Topbar container styles */
+.main-container .page-container .topbar-container {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* User avatar styles */
+.main-container .page-container .topbar-container .user-avatar {
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Avatar styles */
+.main-container .page-container .topbar-container .user-avatar .avatar {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  overflow: hidden;
+  -o-object-position: center;
+  object-position: center;
+  border: 2px solid #0e5da7;
+  border-radius: 50%;
+}
+
+/* Avatar image styles */
+.main-container .page-container .topbar-container .user-avatar .avatar img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* Page content holder styles */
+.main-container .page-container .page-content-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Header logo styles */
+.sidebar-Container .header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image styles */
+.sidebar-Container .header .logo img {
+  max-width: 100%;
+  max-height: 50px;
+  display: block;
+  margin: 0px 10px 0 10px;
+}
+
+/* Specific styles for the RegisterProperty component */
+.register-property {
+  /* Force layout styles using !important */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+/* Style for label and input pairs */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  flex: none; /* Remove flex growth */
+  width: 150px; /* Set a fixed width for labels */
+  margin-right: 10px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.form-input {
+  flex: 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  vertical-align: middle; /* Align inputs vertically */
+}
+
+/* Layout for the entire component */
+.register-property {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Section Layout */
+.section-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section A */
+.section-a {
+  width: 45%; /* Adjust the width as needed */
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5%;
+  text-align: left; /* Align text to the left */
+}
+
+/* Section B */
+.section-b {
+  width: 45%; /* Adjust the width as needed */
+  display: inline-block;
+  vertical-align: top;
+  text-align: left; /* Align text to the left */
+}
+
+/* Subtitles for form sections */
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Rest of your CSS rules */

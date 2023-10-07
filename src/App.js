@@ -11,6 +11,8 @@ import Bills from "./components/Bills";
 import Receipt from "./components/Receipt";
 import LandLordDashboard from "./components/LandlordDashboard";
 import TenantDashboard from "./components/TenantDashoard";
+import RegisterProperty from "./pages/landlord/RegisterProperty.js";
+import Container from "./layouts/Container";
 
 Cookies.set("isLoggedIn", "true");
 const isLoggedIn = Cookies.get("isLoggedIn");
@@ -32,6 +34,7 @@ function App() {
           <Route path="/receipts" element={<Receipt />} />
           <Route path="/landlord+dashboard" element={<LandLordDashboard />} />
           <Route path="/tenant+dashboard" element={<TenantDashboard />} />
+          <Route path="/dashboard" element={<Container Page={RegisterProperty} />}/>
 
         </Routes>
       </BrowserRouter>
