@@ -13,6 +13,10 @@ import LandLordDashboard from "./components/LandlordDashboard";
 import TenantDashboard from "./components/TenantDashoard";
 import RegisterProperty from "./pages/landlord/RegisterProperty.js";
 import Container from "./layouts/Container";
+import 'font-awesome/css/font-awesome.min.css';
+import UpdatedRegisterProperty from "./pages/landlord/UpdatedRegisterProperty";
+
+
 
 Cookies.set("isLoggedIn", "true");
 const isLoggedIn = Cookies.get("isLoggedIn");
@@ -35,6 +39,7 @@ function App() {
           <Route path="/landlord+dashboard" element={<LandLordDashboard />} />
           <Route path="/tenant+dashboard" element={<TenantDashboard />} />
           <Route path="/dashboard" element={<Container Page={RegisterProperty} />}/>
+          <Route path="/new-dashboard" element={<Container Page={UpdatedRegisterProperty} />}/>
 
         </Routes>
       </BrowserRouter>

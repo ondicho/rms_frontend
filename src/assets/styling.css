@@ -163,6 +163,22 @@
   align-items: flex-start;
 }
 
+.main-container section.body-content .apply-job-container .otp-handler .otp-panel .form-action .grouping-collection .increment-group {
+  width: 25px;
+  height: 25px;
+  background-color: #005aa9;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1254901961);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 /* Header logo styles */
 .sidebar-Container .header .logo {
   display: flex;
@@ -243,6 +259,7 @@
   text-align: left; /* Align text to the left */
 }
 
+
 /* Subtitles for form sections */
 .form-section h3 {
   font-size: 18px;
@@ -250,3 +267,120 @@
 }
 
 /* Rest of your CSS rules */
+
+.form-input {
+  min-width: 150px;
+  max-width: 150px;
+  margin-right: 10px;
+}
+
+.helper-text {
+  color: #fb6376ff; /* Highlighted text color */
+  margin-left: 10px; /* Add some space between the input and helper text */
+}
+
+.input-container {
+  display: flex;
+  align-items: center; /* Align input and plus icon vertically */
+  position: relative; /* To position the plus icon relative to the input */
+}
+
+.form-input {
+  flex: 1; /* Allow the input to grow and take available space */
+}
+
+.add-button {
+  background-color: #fb6376ff; /* Circular background color */
+  border-radius: 50%; /* Make it circular */
+  padding: 10px; /* Adjust padding as needed for the size */
+  color: white; /* Icon color */
+  cursor: pointer; /* Add pointer cursor on hover */
+  position: absolute; /* Position it relative to the input */
+  right: 10px; /* Adjust the position as needed */
+}
+
+.section-b {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.floor-plan-card {
+  border-radius: 15px;
+  box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 5px;
+  flex: 1; /* Allow cards to grow and shrink equally */
+  min-width: calc(30% - 20px); /* At least 30% minus margins */
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+/* Updated CSS for FloorPlanModal */
+
+/* Overlay */
+.floor-plan-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is on top */
+}
+
+/* Modal content */
+.floor-plan-modal {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 75%;
+  padding: 20px;
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #999;
+  background: none;
+  border: none;
+}
+
+.save-block{
+  background-color: #999!important;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.h6, h6 {
+  font-size: 1rem;
+  width: 100%;
+}
+
+.floor-plan-details {
+  display: flex;
+}
+
+
+/* Media query for responsiveness (adjust as needed) */
+@media (max-width: 768px) {
+  .floor-plan-card {
+    min-width: calc(50% - 20px); /* At least 50% minus margins on smaller screens */
+  }
+}
