@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Row } from "reactstrap";
+import { Col,Card,CardTitle,CardText,Button,Input,InputGroup,Row } from "reactstrap";
 import { stkpush } from "../Api/Calls";
 import garbage from "../images/garbage.svg";
 import Elec from "../images/idea.png";

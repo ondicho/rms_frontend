@@ -48,7 +48,6 @@ const UpdatedRegisterProperty = () => {
             numberOfFloors: newBlockFloors,
             floors: floorPlanDetails, // Store floor plan details
         };
-        closeCreateBlockModal()
 
         setBlocks([...blocks, newBlock]);
         setNewBlockName("");
@@ -165,13 +164,11 @@ const UpdatedRegisterProperty = () => {
                     <h6>Block Details</h6>
                     <div className="saved-blocks">
                         <span className="helper-text">Saved blocks</span>
-                        <br></br>
                         {blocks.length === 0 ? ( // Check if there are no saved blocks
                             <div className="floor-plan-card">
                                 {/* Display a card with the fa-plus icon */}
-                                <div className="floor-plan-section  new-block">
+                                <div className="floor-plan-section">
                                     <i className="fa fa-plus" onClick={openCreateBlockModal}></i>
-                                    <br></br>
                                     <span className="helper-text">Create a new block</span>
                                 </div>
                             </div>
